@@ -48,7 +48,7 @@ elif FLAGS.mode == 'test':
     elif data_set == 'FamousShape':
         testset_list = 'testset_FamousShape'
         eval_list = 'testset_noise_clean testset_noise_low testset_noise_med testset_noise_high \
-                    testset_density_gradient testset_density_stripe'
+                    testset_density_stripe testset_density_gradient'
     elif data_set == 'SceneNN':
         testset_list = 'testset_SceneNN'
         eval_list = 'testset_SceneNN_clean testset_SceneNN_noise'
