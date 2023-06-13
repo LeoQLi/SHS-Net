@@ -59,7 +59,7 @@ elif FLAGS.mode == 'test':
         testset_list = 'testset_KITTI0608'
         eval_list = testset_list
 
-    command = 'python test.py --gpu={} --dataset_root={} --data_set={} --log_root={} --ckpt_dirs={} --ckpt_iters={} --patch_size={} --batch_size={} \
+    command = 'CUDA_VISIBLE_DEVICES={} python test.py --dataset_root={} --data_set={} --log_root={} --ckpt_dirs={} --ckpt_iters={} --patch_size={} --batch_size={} \
                                 --sample_size={} --encode_knn={} --save_pn={} --sparse_patches={}'.format(
             gpu, dataset_root, data_set, log_root, ckpt_dirs, ckpt_iters, test_patch_size, test_batch_size, sample_size, encode_knn, save_pn, sparse_patches)
 
