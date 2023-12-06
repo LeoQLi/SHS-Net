@@ -320,8 +320,14 @@ def eval(normal_gt_path, normal_pred_path, output_dir):
         for shape in shape_names:
             print(shape)
             normal_pred = np.load(os.path.join(normal_pred_path, shape + '_normal.npy'))                  # (n, 3)
-            points_idx = load_data(filedir=normal_gt_path, filename=shape + '.pidx', dtype=np.int32)      # (n,)
             normal_gt = load_data(filedir=normal_gt_path, filename=shape + '.normals', dtype=np.float32)  # (N, 3)
+            if os.path.exists(os.path.join(normal_gt_path, shape + '.pidx')):
+                points_idx = load_data(filedir=normal_gt_path, filename=shape + '.pidx', dtype=np.int32)      # (n,)
+                eval_sparse = True
+            else:
+                points_idx = np.arange(normal_gt.shape[0])
+                eval_sparse = False
+
             normal_gt = normal_gt[points_idx, :]
             if normal_pred.shape[0] > normal_gt.shape[0]:
                 normal_pred = normal_pred[points_idx, :]
@@ -345,6 +351,7 @@ def eval(normal_gt_path, normal_pred_path, output_dir):
     s = '\n {} \n All RMS oriented (shape average): {} | Mean: {}\n'.format(
                 normal_pred_path, str(all_avg_rms_o), np.mean(all_avg_rms_o))
     print(s)
+    print('eval_sparse:', eval_sparse)
 
     ### delete the normal files
     if not args.save_pn:
@@ -365,7 +372,7 @@ if __name__ == '__main__':
 
         for ckpt_iter in ckpt_iters:
             output_dir, file_save_dir = test(ckpt_dir=ckpt_dir, ckpt_iter=ckpt_iter)
-            if not output_dir or args.data_set == 'Semantic3D' or args.data_set == 'KITTI_sub':
+            if not output_dir or args.data_set in ['Semantic3D', 'KITTI_sub', 'WireframePC']:
                 continue
             all_avg_rms, all_avg_rms_o = eval(normal_gt_path=os.path.join(args.dataset_root, args.data_set),
                                                 normal_pred_path=file_save_dir,

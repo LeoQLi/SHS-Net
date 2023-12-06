@@ -309,6 +309,7 @@ class PatchDataset(Dataset):
             rng.shuffle(pts_shuffled)
             zeros_padding = np.zeros((sample_size - N_pts, 3), dtype=np.float32)
             pts_sub = np.concatenate((pts_shuffled, zeros_padding), axis=0)
+            sub_ids = None
 
         # pts_sub[0, :] = 0    # TODO
         if pts_1 is not None:

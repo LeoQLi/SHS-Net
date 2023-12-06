@@ -71,10 +71,15 @@ Our normal estimation results on the datasets PCPNet and FamousShape can be down
 ## Citation
 If you find our work useful in your research, please cite our paper:
 
-    @article{li2023shsnet,
-      title={{SHS-Net}: Learning Signed Hyper Surfaces for Oriented Normal Estimation of Point Clouds},
-      author={Li, Qing and Feng, Huifang and Shi, Kanle and Gao, Yue and Fang, Yi and Liu, Yu-Shen and Han, Zhizhong},
-      journal={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
-      year={2023}
+    @inproceedings{li2023shsnet,
+      author    = {Li, Qing and Feng, Huifang and Shi, Kanle and Gao, Yue and Fang, Yi and Liu, Yu-Shen and Han, Zhizhong},
+      title     = {{SHS-Net}: Learning Signed Hyper Surfaces for Oriented Normal Estimation of Point Clouds},
+      booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+      publisher = {IEEE Computer Society},
+      address   = {Los Alamitos, CA, USA},
+      pages     = {13591-13600},
+      month     = {June},
+      year      = {2023},
+      doi       = {10.1109/CVPR52729.2023.01306},
+      url       = {https://doi.ieeecomputersociety.org/10.1109/CVPR52729.2023.01306},
     }
-
