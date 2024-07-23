@@ -1,4 +1,4 @@
-# SHS-Net: Learning Signed Hyper Surfaces for Oriented Normal Estimation of Point Clouds (CVPR 2023)
+# SHS-Net: Learning Signed Hyper Surfaces for Oriented Normal Estimation of Point Clouds (TPAMI 2024 / CVPR 2023)
 
 ### **[Project](https://leoqli.github.io/SHS-Net/) | [arXiv](https://arxiv.org/abs/2305.05873) | [Supplementary](https://drive.google.com/file/d/14JMlS62uogc5yooYBzo81zO2eu6ohfd2/view?usp=sharing) | [Dataset](https://drive.google.com/drive/folders/1eNpDh5ivE7Ap1HkqCMbRZpVKMQB1TQ6H?usp=share_link)**
 
@@ -82,4 +82,12 @@ If you find our work useful in your research, please cite our paper:
       year      = {2023},
       doi       = {10.1109/CVPR52729.2023.01306},
       url       = {https://doi.ieeecomputersociety.org/10.1109/CVPR52729.2023.01306},
+    }
+
+    @article{li2024shsnet-pami,
+      author    = {Li, Qing and Feng, Huifang and Shi, Kanle and Gao, Yue and Fang, Yi and Liu, Yu-Shen and Han, Zhizhong},
+      title     = {Learning Signed Hyper Surfaces for Oriented Point Cloud Normal Estimation},
+      booktitle = {IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI)},
+      year      = {2024},
+      doi       = {10.1109/TPAMI.2024.3431221},
     }
