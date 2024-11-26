@@ -89,5 +89,8 @@ If you find our work useful in your research, please cite our paper:
       title     = {Learning Signed Hyper Surfaces for Oriented Point Cloud Normal Estimation},
       booktitle = {IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI)},
       year      = {2024},
+      volume    = {46},
+      number    = {12},
+      pages     = {9957-9974},
       doi       = {10.1109/TPAMI.2024.3431221},
     }
